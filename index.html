@@ -19,6 +19,13 @@
     }
 
     console.log(isLeapYear(1992));
+
+    //function 2
+    function BMI(weight, height) {
+        height = height / (10 * 10); //or Math.pow()
+        return (weight / (height * height)).toFixed(2); //toFixed(2) to round total to 2 number of decimals, method returns a string
+    }
+    console.log(BMI(60, 165));
 </script>
 
 </html>
