@@ -26,6 +26,28 @@
         return (weight / (height * height)).toFixed(2); //toFixed(2) to round total to 2 number of decimals, method returns a string
     }
     console.log(BMI(60, 165));
+
+    //function 3
+    function firstNonRepeating(arr) {
+        var array_size = arr.length;
+        var map = new Map();
+        for (var i = 0; i < array_size; i++) {
+            if (map.has(arr[i])) {
+                map.set(arr[i], map.get(arr[i]) + 1);
+            }
+            else {
+                map.set(arr[i], 1);
+            }
+        }
+        for (var [key, value] of map.entries()) {
+            if (value == 1) {
+                return key;
+            }
+        }
+    }
+
+    array = [2, 2, 5, 6, 6, 6];
+    console.log(firstNonRepeating(array));
 </script>
 
 </html>
