@@ -48,6 +48,26 @@
 
     array = [2, 2, 5, 6, 6, 6];
     console.log(firstNonRepeating(array));
+
+    //function 4
+    function findSecondLargestElement(nums) {
+        var first_max = -9999;
+        var second_max = -9999;
+        for (var i = 0; i < nums.length; i++) {
+            if (nums[i] > first_max) {
+                second_max = first_max;
+                first_max = nums[i];
+            }
+            else if (nums[i] > second_max) {
+                second_max = nums[i];
+            }
+        }
+        return second_max;
+    }
+
+    array = [1, 2, 3, 8, 5, 6];
+    console.log(findSecondLargestElement(array));
+
 </script>
 
 </html>
