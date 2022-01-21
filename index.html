@@ -1,0 +1,24 @@
+<html>
+<h2>Please check output in console &#128516;</h2>
+
+<script>
+    //function 1
+    function isLeapYear(year) {
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    return true;
+                }
+                return false;
+            }
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    console.log(isLeapYear(1992));
+</script>
+
+</html>
